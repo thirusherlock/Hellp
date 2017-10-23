@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="panel-group">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#basic">Additional Info</a>
+                </h4>
+            </div>
+            <div id="basic" class="panel panel-collapse">
+                <div class="panel-body">
+                    <form class="form-horizontal" name="form1">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="web">Webpage:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="web" ng-model="add.web" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="link">Document Link:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="link" ng-model="add.link" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="createdby">Created By:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="createdby" ng-model="add.createdby" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="createdat">Created At:</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="createdat" ng-model="add.createdat" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer">
+                    <button type="button" class="btn btn-success" ui-sref="">Save</button>
+                    <button type="button" class="btn btn-primary" ui-sref="">New</button>
+                    <button type="button" class="btn btn-danger" ui-sref="">In Progress</button>
+                    <button type="button" class="btn btn-default" ui-sref="">Completed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

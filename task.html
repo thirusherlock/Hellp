@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="jumbotron text-center" style="background-color: purple;">
+        <h1> CRM </h1>
+    </div>
+</div>
+<div class="container" align="center">
+    <div class="form-group">
+        <label for="comp1">Company</label>
+        <select ng-model="name" ng-change="comp(name)" class="form-control" id="comp1" ng-options="y.name for y in company">
+            <option value="">Select the Company!</option>
+        </select>
+    </div>
+</div>
+<div class="container" align="center">
+    <div class="form-group">
+       <label for="sel1">Activity</label>
+        <select ng-model="hello" class="form-control" id="sel1" ng-options="x.name for x in activitydetails">
+        <option value="">Select an Activity!</option>
+        </select>
+    </div>
+</div>
+<div ui-view></div>

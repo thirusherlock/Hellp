@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1> CRM </h1>
+    </div>
+</div>
+<div ui-view></div>
+<nav class="navbar">
+    <div class="container">
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><button type="button" class="btn btn-success" ui-sref="activity">Add Activity</button></li>
+            <li><button type="button" class="btn btn-primary" ui-sref="task">Add Data</button></li>
+            <li><button type="button" class="btn btn-danger" ui-sref="login">Logout</button></li>
+        </ul>
+    </div>
+</nav>
+<div class="container" align="center">
+    <h3> Task Overview </h3>
+    <table class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th> Company Name </th>
+            <th> Task Name </th>
+            <th> Start Date </th>
+            <th> End Date </th>
+            <th> Assigned </th>
+            <th> Status </th>
+            <th> View </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat = "detail in details | orderBy: 'startdate':reverse">
+            <td>{{ detail.companyname  }}</td>
+            <td>{{ detail.taskname }}</td>
+            <td>{{ detail.startdate }}</td>
+            <td>{{ detail.enddate }}</td>
+            <td>{{ detail.assigned }}</td>
+            <td>{{ detail.status }}</td>
+            <td><button class="btn btn-primary btn-xs" ui-sref="view({id: detail.id})">View</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>

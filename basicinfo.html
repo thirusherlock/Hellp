@@ -1,0 +1,214 @@
+<div class="container-fluid" align="center">
+    <div class="row equal">
+        <div class="col-sm-5">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse1">Basic Information</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <form class="form-horizontal" name="form1">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="description">Description:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="description" ng-model="detail.description" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="owner">Owner:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="owner" ng-model="detail.owner" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="assigned">Assigned To:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="assigned" ng-model="detail.assigned" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="priority">Priority:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="priority" ng-model="detail.priority" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2">Status:</label>
+                                    <div class="radio col-sm-6">
+                                        <label><input type="radio" name="optradio">In Progress</label>
+                                        <label><input type="radio" name="optradio">Completed</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="comment">Comment:</label>
+                                    <div class="col-sm-6">
+                                        <textarea class="form-control" rows="5" id="comment" ng-model="detail.comment"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-success" ui-sref="basic(detail)">Save</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="col-sm-5">
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-target="#collapse2" data-parent="#accordion">Scheduling Information</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <form class="form-horizontal" name="form1">
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="start">Start Date:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="start" ng-model="detail.startdate" placeholder="dd/mm/yyyy" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="stime">Start Time</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="stime" ng-model="sched.stime" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="end">End Date:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="end" ng-model="detail.enddate" placeholder="dd/mm/yyyy" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="etime">End Time</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="etime" ng-model="sched.etime" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-2" for="location">Location:</label>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" id="location" ng-model="sched.location" required>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="panel-footer">
+                        <button type="button" class="btn btn-success">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div class="col-sm-5">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#collapse3" data-parent="#accordion">Additional Information</a>
+                        </h4>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <form class="form-horizontal" name="form1">
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="web">Webpage:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="web" ng-model="add.web" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="link">Document Link:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="link" ng-model="add.link" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="createdby">Created By:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="createdby" ng-model="add.createdby" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="createdat">Created At:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="createdat" ng-model="add.createdat" required>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-success">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-5">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-target="#collapse4" data-parent="#accordion">Recurrence Information</a>
+                        </h4>
+                    </div>
+                    <div id="collapse4" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label> Frequency of Visits </label>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" ng-checked="fre"> Daily </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" ng-checked="fre"> Weekly </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" ng-checked="fre"> Monthly </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox" ng-checked="fre"> Yearly </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="days">How many days often?</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="days" ng-model="rec.days" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="startdate">Start Date:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="startdate" ng-model="rec.startdate" placeholder="dd/mm/yyyy" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-sm-2" for="enddate">Start Date:</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="enddate" ng-model="rec.enddate" placeholder="dd/mm/yyyy" required>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="panel-footer">
+                            <button type="button" class="btn btn-success">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

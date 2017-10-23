@@ -1,0 +1,15 @@
+
+<div class="container">
+    <div class="card card-container">
+
+        <img id="profile-img" class="profile-img-card" src="avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" ng-model="user1.email" required autofocus>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="user1.password" required>
+            <button type="button" class="btn btn-danger" ng-click="register(user1)">Register</button>
+        </form>
+
+    </div>
+</div>
